@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import { Canvas } from '@react-three/fiber';
-import Logo from '@/components/logo';
+import Logo from '@/atoms/logo';
 import PastShowsTimeline from '@/atoms/pastShowsTimeline';
 import { Box, Typography } from '@mui/material';
 
@@ -39,7 +39,7 @@ export default function Home({ events }) {
               unforgettable experience.
             </Typography>
             <Box mb={2} />
-            <Typography variant="body1">
+            <Typography variant="subtitle1">
               Founded in 2021 as a duo, they have been working together and
               performing shows since 2016, showcasing their individual talent
               and creativity. Their passion for pushing the boundaries of music

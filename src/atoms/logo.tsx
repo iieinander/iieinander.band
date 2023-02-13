@@ -1,7 +1,6 @@
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
 import gsap from 'gsap';
 import { fbmCloudMaterial } from '@/ions/fbmCloudMaterial';
 

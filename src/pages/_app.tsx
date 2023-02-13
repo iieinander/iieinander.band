@@ -1,19 +1,26 @@
 import type { AppProps } from 'next/app';
 import '@/styles/globals.css';
-import { createTheme, ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
+import { theme } from '@/atoms/theme';
+import { CacheProvider, EmotionCache } from '@emotion/react';
+import createEmotionCache from '@/ions/createEmotionCache';
+import CssBaseline from '@mui/material/CssBaseline';
 
-const theme = createTheme({
-  palette: {
-    text: {
-      secondary: `#757575`,
-    },
-  },
-});
+const clientSideEmotionCache = createEmotionCache();
 
-export default function App({ Component, pageProps }: AppProps) {
+interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
+
+export default function App(props: MyAppProps) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </CacheProvider>
   );
 }
