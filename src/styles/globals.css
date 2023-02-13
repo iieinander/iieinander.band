@@ -93,6 +93,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  font: 1em sans-serif;
 }
 
 a {
@@ -100,8 +102,15 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0 0 .5em 0;
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
+
