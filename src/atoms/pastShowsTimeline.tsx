@@ -9,8 +9,13 @@ import {
 } from '@mui/lab';
 import { Link, Typography } from '@mui/material';
 import React from 'react';
+import { Event } from '@/ions/event';
 
-export default function PastShowsTimeline({ events }) {
+interface PastShowsTimelineProps {
+  events: Event[];
+}
+
+export default function PastShowsTimeline({ events }: PastShowsTimelineProps) {
   return (
     <>
       <Typography variant="h3" component="h2" gutterBottom>
@@ -29,7 +34,7 @@ export default function PastShowsTimeline({ events }) {
               >
                 {event.title}
               </Link>
-              <Typography variant="body2">{event.description}</Typography>
+              <Typography variant="body2">{event.type}</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />

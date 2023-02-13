@@ -3,9 +3,10 @@ import { useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { fbmCloudMaterial } from '@/ions/fbmCloudMaterial';
+import * as THREE from 'three';
 
 export default function Logo() {
-  const logo = useRef();
+  const logo = useRef<THREE.Object3D>();
   const { scene } = useGLTF(`/iieinander.glb`);
 
   useEffect(() => {
@@ -13,8 +14,8 @@ export default function Logo() {
       return;
     }
 
-    logo.current.traverse((node) => {
-      if (node.isMesh) {
+    logo.current.traverse((node: THREE.Object3D) => {
+      if (node instanceof THREE.Mesh) {
         node.material = fbmCloudMaterial;
         fbmCloudMaterial.uniforms.resolution.value.x = 2048;
         fbmCloudMaterial.uniforms.resolution.value.y = 1028;
@@ -37,7 +38,7 @@ export default function Logo() {
 
   useFrame((state, delta) => {
     fbmCloudMaterial.uniforms.time.value += delta * 0.7;
-    fbmCloudMaterial.uniforms.cameraPosition.value = logo.current.rotation;
+    fbmCloudMaterial.uniforms.cameraPosition.value = logo?.current?.rotation;
   });
 
   return (

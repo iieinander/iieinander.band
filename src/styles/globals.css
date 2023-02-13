@@ -85,13 +85,6 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: #000000;
-
-  font: 1em sans-serif;
-}
-
 a {
   color: inherit;
   text-decoration: none;
