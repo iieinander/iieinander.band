@@ -1,16 +1,11 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
 import { Canvas } from '@react-three/fiber';
 import Logo from '@/components/logo';
 import PastShowsTimeline from '@/atoms/pastShowsTimeline';
-import { Typography, Box } from '@material-ui/core';
-import { useLayout } from '@/atoms/layout';
+import { Box, Typography } from '@mui/material';
 
 export default function Home({ events }) {
-  const layout = useLayout();
-
   return (
     <>
       <Head>
@@ -43,7 +38,7 @@ export default function Home({ events }) {
               by NERDDISCO in real-time, making each performance an
               unforgettable experience.
             </Typography>
-            <Box className={layout.spaceBetweenParagraphs} />
+            <Box mb={2} />
             <Typography variant="body1">
               Founded in 2021 as a duo, they have been working together and
               performing shows since 2016, showcasing their individual talent

@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import '@/styles/globals.css';
-import { ThemeProvider, createTheme } from '@material-ui/core';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 const theme = createTheme({
   palette: {
