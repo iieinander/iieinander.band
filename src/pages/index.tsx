@@ -15,7 +15,7 @@ export default function Home({ events }: HomeProps) {
     <>
       <Head>
         <title>iieinander</title>
-        <meta name="description" content="iieinander is a band" />
+        <meta name="description" content="iieinander is a cutting-edge band" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -36,7 +36,7 @@ export default function Home({ events }: HomeProps) {
         <div className={styles.container}>
           <div className={styles.center}>
             <Typography variant="subtitle1">
-              iieiander is a cutting-edge band consisting of two talented
+              iieinander is a cutting-edge band consisting of two talented
               artists, 2xAA and NERDDISCO, who come together to create a unique
               and captivating performance. Their music, crafted by 2xAA using
               Gameboy Advance, is paired with audio-reactive visuals generated
