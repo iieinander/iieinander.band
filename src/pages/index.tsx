@@ -27,6 +27,10 @@ export default function Home({ events }: HomeProps) {
         <title>iieinander</title>
         <meta name="description" content="iieinander is a cutting-edge band" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          property="og:image"
+          content="https://iieinander.band/iieinander_color.png"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
