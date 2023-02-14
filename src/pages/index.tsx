@@ -98,7 +98,7 @@ export default function Home({ events }: HomeProps) {
 
           <div className={styles.center}>
             <Divider />
-            <Typography variant="h3" align="center" gutterBottom>
+            <Typography variant="h2" align="center" gutterBottom>
               Media
             </Typography>
 

@@ -18,7 +18,7 @@ interface PastShowsTimelineProps {
 export default function PastShowsTimeline({ events }: PastShowsTimelineProps) {
   return (
     <>
-      <Typography variant="h3" component="h2" align="center" gutterBottom>
+      <Typography variant="h2" component="h2" align="center" gutterBottom>
         Past Shows
       </Typography>
 
