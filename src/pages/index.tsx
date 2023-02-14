@@ -85,7 +85,7 @@ export default function Home({ events }: HomeProps) {
               Founded in 2021 as a duo, they have been working together and
               performing shows since 2016, highlighting their individual talent
               and creativity. Their passion for pushing the boundaries of music
-              and visual arts is evident in everything they, proving that
+              and visual arts is evident in everything they do, proving that
               anything is possible.
             </Typography>
           </div>
