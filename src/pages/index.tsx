@@ -3,8 +3,18 @@ import styles from '@/styles/Home.module.css';
 import { Canvas } from '@react-three/fiber';
 import Logo from '@/atoms/logo';
 import PastShowsTimeline from '@/atoms/pastShowsTimeline';
-import { Box, Typography } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardContent,
+  Divider,
+  List,
+  ListItemButton,
+  ListItemText,
+  Typography,
+} from '@mui/material';
 import { Event } from '@/ions/event';
+import Separator from '@/atoms/separator';
 
 interface HomeProps {
   events: Event[];
@@ -46,20 +56,45 @@ export default function Home({ events }: HomeProps) {
             <Box component="div" mb={2} />
             <Typography variant="subtitle1">
               Founded in 2021 as a duo, they have been working together and
-              performing shows since 2016, showcasing their individual talent
+              performing shows since 2016, highlighting their individual talent
               and creativity. Their passion for pushing the boundaries of music
-              and visual arts is evident in every performance, showing that
+              and visual arts is evident in everything they, proving that
               anything is possible.
             </Typography>
           </div>
 
           <div className={styles.center}>
+            {/* <Separator /> */}
+            <Divider />
             <PastShowsTimeline events={events} />
           </div>
 
           <div className={styles.center}>
+            <Divider />
             <Typography variant="h3">Media</Typography>
+
+            <Box component="div" mb={2} />
+
+            <Card sx={{ minWidth: 275 }}>
+              <CardContent>
+                <List>
+                  <ListItemButton component="a" href="/iieinander_black.svg">
+                    <ListItemText primary="Logo (black)" />
+                  </ListItemButton>
+                  <ListItemButton component="a" href="/iieinander_white.svg">
+                    <ListItemText primary="Logo (white)" />
+                  </ListItemButton>
+                  <ListItemButton component="a" href="/iieinander_color.png">
+                    <ListItemText primary="Logo (color)" />
+                  </ListItemButton>
+                </List>
+              </CardContent>
+            </Card>
           </div>
+        </div>
+
+        <div className={styles.center}>
+          <Typography variant="body2">© 2021 - 2023 by iieinander</Typography>
         </div>
       </main>
     </>

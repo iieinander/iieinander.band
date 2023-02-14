@@ -1,7 +1,12 @@
+import { Canvas } from '@react-three/fiber';
+import SeparatorChild from './separatorChild';
+
 export default function Separator() {
   return (
-    <>
-      <p>Test</p>
-    </>
+    <div className="test">
+      <Canvas>
+        <SeparatorChild />
+      </Canvas>
+    </div>
   );
 }
