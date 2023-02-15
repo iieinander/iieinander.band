@@ -130,7 +130,18 @@ export default function Home({ events }: HomeProps) {
         </div>
 
         <div className={styles.center}>
-          <Typography variant="body2">© 2021 - 2023 by iieinander</Typography>
+          <Divider />
+          <Typography variant="body2">
+            © 2021 - 2023 by iieinander |{` `}
+            <Link
+              href="https://github.com/iieinander/iieinander.band"
+              target="_blank"
+              rel="noopener"
+            >
+              Source
+            </Link>
+          </Typography>
+          <Box component="div" mb={4} />
         </div>
       </main>
     </>
